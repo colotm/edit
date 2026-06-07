@@ -30,4 +30,7 @@
 },
   {
 Go Direct Force & Acceleration
+}, 
+  {
+ Face Sensing
 }
