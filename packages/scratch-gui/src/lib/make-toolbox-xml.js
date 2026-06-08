@@ -93,6 +93,7 @@ const motion = function (isInitialSetup, isStage, targetId, colors) {
                 </shadow>
             </value>
         </block>
+        <block id="${targetId}_direction" type="motion_direction"/>`}
         <block type="motion_pointtowards">
             <value name="TOWARDS">
                 <shadow type="motion_pointtowards_menu">
@@ -114,6 +115,7 @@ const motion = function (isInitialSetup, isStage, targetId, colors) {
                 </shadow>
             </value>
         </block>
+        <block id="${targetId}_xposition" type="motion_xposition"/>
         <block type="motion_changeyby">
             <value name="DY">
                 <shadow type="math_number">
@@ -128,14 +130,11 @@ const motion = function (isInitialSetup, isStage, targetId, colors) {
                 </shadow>
             </value>
         </block>
+        <block id="${targetId}_yposition" type="motion_yposition"/>
         ${blockSeparator}
         <block type="motion_ifonedgebounce"/>
         ${blockSeparator}
         <block type="motion_setrotationstyle"/>
-        ${blockSeparator}
-        <block id="${targetId}_xposition" type="motion_xposition"/>
-        <block id="${targetId}_yposition" type="motion_yposition"/>
-        <block id="${targetId}_direction" type="motion_direction"/>`}
         ${categorySeparator}
     </category>
     `;
@@ -216,6 +215,7 @@ const looks = function (isInitialSetup, isStage, targetId, costumeName, backdrop
                 </value>
             </block>
             <block type="looks_nextbackdrop"/>
+            <block id="backdropnumbername" type="looks_backdropnumbername"/>
         ` : `
             <block id="${targetId}_switchcostumeto" type="looks_switchcostumeto">
                 <value name="COSTUME">
@@ -224,7 +224,8 @@ const looks = function (isInitialSetup, isStage, targetId, costumeName, backdrop
                     </shadow>
                 </value>
             </block>
-            <block type="looks_nextcostume"/>
+            <block type="looks_nextcostume"/
+            <block id="${targetId}_costumenumbername" type="looks_costumenumbername"/>
             <block type="looks_switchbackdropto">
                 <value name="BACKDROP">
                     <shadow type="looks_backdrops">
@@ -233,6 +234,7 @@ const looks = function (isInitialSetup, isStage, targetId, costumeName, backdrop
                 </value>
             </block>
             <block type="looks_nextbackdrop"/>
+            <block id="backdropnumbername" type="looks_backdropnumbername"/>
             ${blockSeparator}
             <block type="looks_changesizeby">
                 <value name="CHANGE">
@@ -248,6 +250,7 @@ const looks = function (isInitialSetup, isStage, targetId, costumeName, backdrop
                     </shadow>
                 </value>
             </block>
+                       <block type="looks_size"/
         `}
         ${blockSeparator}
         <block type="looks_changeeffectby">
@@ -278,13 +281,6 @@ const looks = function (isInitialSetup, isStage, targetId, costumeName, backdrop
                     </shadow>
                 </value>
             </block>
-        `}
-        ${isStage ? `
-            <block id="backdropnumbername" type="looks_backdropnumbername"/>
-        ` : `
-            <block id="${targetId}_costumenumbername" type="looks_costumenumbername"/>
-            <block id="backdropnumbername" type="looks_backdropnumbername"/>
-            <block id="${targetId}_size" type="looks_size"/>
         `}
         ${categorySeparator}
     </category>
