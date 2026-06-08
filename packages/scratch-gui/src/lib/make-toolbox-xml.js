@@ -776,11 +776,11 @@ const makeToolboxXML = function (isInitialSetup, isStage = true, targetId, categ
         }
         // return `undefined`
     };
-    const motionXML = moveCategory('motion') || motion(isInitialSetup, isStage, targetId, colors.motion);
     const looksXML = moveCategory('looks') ||
         looks(isInitialSetup, isStage, targetId, costumeName, backdropName, colors.looks);
     const soundXML = moveCategory('sound') || sound(isInitialSetup, isStage, targetId, soundName, colors.sounds);
     const eventsXML = moveCategory('event') || events(isInitialSetup, isStage, targetId, colors.event);
+    const motionXML = moveCategory('motion') || motion(isInitialSetup, isStage, targetId, colors.motion);
     const controlXML = moveCategory('control') || control(isInitialSetup, isStage, targetId, colors.control);
     const sensingXML = moveCategory('sensing') || sensing(isInitialSetup, isStage, targetId, colors.sensing);
     const operatorsXML = moveCategory('operators') || operators(isInitialSetup, isStage, targetId, colors.operators);
@@ -789,10 +789,10 @@ const makeToolboxXML = function (isInitialSetup, isStage = true, targetId, categ
 
     const everything = [
         xmlOpen,
-        motionXML, gap,
         looksXML, gap,
         soundXML, gap,
         eventsXML, gap,
+        motionXML, gap,
         controlXML, gap,
         sensingXML, gap,
         operatorsXML, gap,
