@@ -434,6 +434,7 @@ const control = function (isInitialSetup, isStage, targetId, colors) {
             </block>
             <block type="control_delete_this_clone"/>
         `}
+            <block id="for_each" type="control_for_each"/>
         ${categorySeparator}
     </category>
     `;
