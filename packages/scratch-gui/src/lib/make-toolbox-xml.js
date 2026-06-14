@@ -115,6 +115,7 @@ const motion = function (isInitialSetup, isStage, targetId, colors) {
                 </shadow>
             </value>
         </block>
+        ${blockSeparator}
         <block id="${targetId}_xposition" type="motion_xposition"/>
         <block type="motion_changeyby">
             <value name="DY">
@@ -226,6 +227,7 @@ const looks = function (isInitialSetup, isStage, targetId, costumeName, backdrop
             </block>
             <block type="looks_nextcostume"/
             <block id="${targetId}_costumenumbername" type="looks_costumenumbername"/>
+            ${blockSeparator}
             <block type="looks_switchbackdropto">
                 <value name="BACKDROP">
                     <shadow type="looks_backdrops">
