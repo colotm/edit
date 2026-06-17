@@ -115,8 +115,8 @@ const motion = function (isInitialSetup, isStage, targetId, colors) {
                 </shadow>
             </value>
         </block>
-        ${blockSeparator}
         <block id="${targetId}_xposition" type="motion_xposition"/>
+                ${blockSeparator}
         <block type="motion_changeyby">
             <value name="DY">
                 <shadow type="math_number">
