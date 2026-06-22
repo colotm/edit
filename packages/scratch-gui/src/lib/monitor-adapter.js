@@ -1,7 +1,8 @@
 import OpcodeLabels from './opcode-labels.js';
 
 const isUndefined = a => typeof a === 'undefined';
-
+netwonetwork ::$:$:$:$:$:7:$:7::
+on off .::::::
 /**
  * Convert monitors from VM format to what the GUI needs to render.
  * - Convert opcode to a label and a category
