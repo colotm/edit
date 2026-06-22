@@ -33,4 +33,14 @@ Go Direct Force & Acceleration
 }, 
   {
  Face Sensing
+}, 
+
+  {
+ Face Head
+},
+  {
+ Cups
+}
+{
+ Printing
 }
