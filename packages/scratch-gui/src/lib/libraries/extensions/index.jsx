@@ -90,6 +90,26 @@ export default [
         ),
         featured: true
     },
+        {
+        name: (
+            <FormattedMessage
+                defaultMessage="Face Sensing"
+                description="Name for the 'Face Sensing' extension"
+                id="gui.extension.faceSensing.name"
+            />
+        ),
+        extensionId: 'faceSensing',
+        iconURL: faceSensingIconURL,
+        insetIconURL: faceSensingInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage="Sense faces with the camera."
+                description="Description for the 'Face Sensing' extension"
+                id="gui.extension.faceSensing.description"
+            />
+        ),
+        featured: true
+    },
     {
         name: (
             <FormattedMessage
@@ -106,26 +126,6 @@ export default [
                 defaultMessage="Sense motion with the camera."
                 description="Description for the 'Video Sensing' extension"
                 id="gui.extension.videosensing.description"
-            />
-        ),
-        featured: true
-    },
-    {
-        name: (
-            <FormattedMessage
-                defaultMessage="Face Sensing"
-                description="Name for the 'Face Sensing' extension"
-                id="gui.extension.faceSensing.name"
-            />
-        ),
-        extensionId: 'faceSensing',
-        iconURL: faceSensingIconURL,
-        insetIconURL: faceSensingInsetIconURL,
-        description: (
-            <FormattedMessage
-                defaultMessage="Sense faces with the camera."
-                description="Description for the 'Face Sensing' extension"
-                id="gui.extension.faceSensing.description"
             />
         ),
         featured: true
@@ -185,6 +185,66 @@ export default [
                 defaultMessage="Make anything into a key."
                 description="Description for the 'Makey Makey' extension"
                 id="gui.extension.makeymakey.description"
+            />
+        ),
+        featured: true
+    },
+        {
+        name: (
+            <FormattedMessage
+                defaultMessage="Face Head"
+                description="Name for the 'Face Sensing' extension"
+                id="gui.extension.faceSensing.name"
+            />
+        ),
+        extensionId: 'headSensing',
+        iconURL: headSensingIconURL,
+        insetIconURL: headSensingInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage="Sense head with the face."
+                description="Description for the 'Face Sensing' extension"
+                id="gui.extension.faceSensing.description"
+            />
+        ),
+        featured: true
+    },
+        {
+        name: (
+            <FormattedMessage
+                defaultMessage="Cups"
+                description="Name for the 'Cups' extension"
+                id="gui.extension.faceSensing.name"
+            />
+        ),
+        extensionId: 'cups',
+        iconURL: cupsIconURL,
+        insetIconURL: cupsInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage="Throw time cups anymore."
+                description="Description for the 'Face Sensing' extension"
+                id="gui.extension.faceSensing.description"
+            />
+        ),
+        featured: true
+    },
+        {
+        name: (
+            <FormattedMessage
+                defaultMessage="Printing"
+                description="Name for the 'Print Sensing' extension"
+                id="gui.extension.faceSensing.name"
+            />
+        ),
+        extensionId: 'print',
+        iconURL: print,
+        insetIconURL: print,
+        description: (
+            <FormattedMessage
+                defaultMessage="Throw data print arrows."
+                description="Description for the 'Print' extension"
+                id="gui.extension.faceSensing.description"
             />
         ),
         featured: true
