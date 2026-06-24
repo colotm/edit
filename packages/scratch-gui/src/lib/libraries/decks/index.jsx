@@ -1,4 +1,5 @@
-import React from 'react';
+// Binary file content is not editable. But you can still rename or move it.
+    import React from 'react';
 import {FormattedMessage} from 'react-intl';
 
 // Tutorial thumbnails: Avoid using any text that would need to be
@@ -130,7 +131,30 @@ export default {
         ],
         urlId: 'getStarted'
     },
-
+    {
+    'intro-move-sayhello': {
+        name: (
+            <FormattedMessage
+                defaultMessage="Solve In"
+                description="Name for the 'Solve in' how-to"
+                id="gui.howtos.intro-move-sayhello-hat.name"
+            />
+        ),
+        tags: ['help'],
+        category: CATEGORIES.gettingStarted,
+        img: libraryIntro,
+        steps: [{
+            video: 'intro-move-sayhello'
+        }, {
+            title: (
+                <FormattedMessage
+                    defaultMessage="Steps in tutorial"
+                    description="Step name for 'Add a move block' step"
+                    id="gui.howtos.intro-move.step_stepMove"
+                />
+            ),
+            image: 'introMove'
+        },
     'intro-getting-started-ASL': {
         name: (
             <FormattedMessage
@@ -1176,7 +1200,30 @@ export default {
         ],
         urlId: 'clicker-game'
     },
-
+                {
+    'intro-move-sayhello': {
+        name: (
+            <FormattedMessage
+                defaultMessage="Cups"
+                description="Name for the 'Getting Started' how-to"
+                id="gui.howtos.intro-move-sayhello-hat.name"
+            />
+        ),
+        tags: ['help', 'stuck', 'how', 'can', 'say'],
+        category: CATEGORIES.gettingStarted,
+        img: libraryIntro,
+        steps: [{
+            video: 'intro-move-sayhello'
+        }, {
+            title: (
+                <FormattedMessage
+                    defaultMessage="Add a move block"
+                    description="Step name for 'Add a move block' step"
+                    id="gui.howtos.intro-move.step_stepMove"
+                />
+            ),
+            image: 'introMove'
+        }, {
     'Chase-Game': {
         name: (
             <FormattedMessage
