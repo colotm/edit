@@ -39,7 +39,7 @@ Go Direct Force & Acceleration
  Face Head
 },
   {
- Cups,
+ Cups
 }
 {
  Printing
