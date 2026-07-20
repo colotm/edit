@@ -481,17 +481,17 @@ const sensing = function (isInitialSetup, isStage, targetId, colors) {
                     </shadow>
                 </value>
             </block>
+                    <block id="answer" type="sensing_answer"/>
         `}
         ${blockSeparator}
     
-        <block type="sensing_mousedown"/>
-        <block type="sensing_mousex"/>
-        <block type="sensing_mousey"/>
         <block type="sensing_keypressed">
             <value name="KEY_OPTION">
                 <shadow type="sensing_keyoptions"/>
             </value>
-        </block>
+        </block>        <block type="sensing_mousedown"/>
+        <block type="sensing_mousex"/>
+        <block type="sensing_mousey"/>
         ${isStage ? '' : `
             ${blockSeparator}
             '<block type="sensing_setdragmode" id="sensing_setdragmode"></block>'+
@@ -509,11 +509,10 @@ const sensing = function (isInitialSetup, isStage, targetId, colors) {
             </value>
         </block>
         ${blockSeparator}
-        <block id="online" type="sensing_online" />
         <block id="current" type="sensing_current"/>
         <block type="sensing_dayssince2000"/>
-        ${blockSeparator}     
-        <block id="answer" type="sensing_answer"/>
+        ${blockSeparator} 
+                <block id="online" type="sensing_online" />
         <block type="sensing_username"/>
         ${categorySeparator}
     </category>
@@ -639,10 +638,29 @@ const operators = function (isInitialSetup, isStage, targetId, colors) {
         </block>
         ${blockSeparator}
         <block type="operator_and"/>
-        <block type="operator_not"/>
         <block type="operator_or"/
+                <block type="operator_not"/>
         ${blockSeparator}
         ${isInitialSetup ? '' : `
+        <block type="operator_length">
+                <value name="STRING">
+                    <shadow type="text">
+                        <field name="TEXT">${apple}</field>
+                    </shadow>
+                </value>
+            </block>
+             <block type="operator_join">
+                <value name="STRING1">
+                    <shadow type="text">
+                        <field name="TEXT">${apple} </field>
+                    </shadow>
+                </value>
+                <value name="STRING2">
+                    <shadow type="text">
+                        <field name="TEXT">${banana}</field>
+                    </shadow>
+                </value>
+            </block>
             <block type="operator_letter_of">
                 <value name="LETTER">
                     <shadow type="math_whole_number">
@@ -655,25 +673,8 @@ const operators = function (isInitialSetup, isStage, targetId, colors) {
                     </shadow>
                 </value>
             </block>
-            <block type="operator_length">
-                <value name="STRING">
-                    <shadow type="text">
-                        <field name="TEXT">${apple}</field>
-                    </shadow>
-                </value>
-            </block>
-            <block type="operator_join">
-                <value name="STRING1">
-                    <shadow type="text">
-                        <field name="TEXT">${apple} </field>
-                    </shadow>
-                </value>
-                <value name="STRING2">
-                    <shadow type="text">
-                        <field name="TEXT">${banana}</field>
-                    </shadow>
-                </value>
-            </block>
+    
+
             <block type="operator_contains" id="operator_contains">
               <value name="STRING1">
                 <shadow type="text">
